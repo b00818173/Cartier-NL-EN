@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartier High End · Market Intelligence Monthly · April 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px; line-height: 1.7; color: #1a1a1a;
+  background: #f7f6f2; padding: 40px 20px 80px;
+}
+
+/* SIDEBAR */
+.sb {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  left: max(10px, calc(50% - 590px));
+  width: 240px; z-index: 100;
+  background: #fff; border: 0.5px solid #dddbd4;
+  padding: 14px 0; max-height: 92vh;
+  overflow-y: auto; scrollbar-width: none;
+}
+.sb::-webkit-scrollbar { display: none; }
+@media (max-width: 1230px) { .sb { display: none; } }
+.sb-title { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #bbb; padding: 0 14px 8px; border-bottom: 0.5px solid #ece9e2; margin-bottom: 6px; }
+.sb-div { height: 0.5px; background: #ece9e2; margin: 5px 14px; }
+.sb-part { font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; padding: 5px 14px 2px; }
+.sb-a { display: block; font-size: 11px; font-weight: 500; color: #888; padding: 3px 14px; text-decoration: none; cursor: pointer; border-left: 1.5px solid transparent; transition: color .15s, border-color .15s; }
+.sb-a:hover { color: #333; }
+.sb-a.active { color: #1a1a1a; border-left-color: #1a1a1a; }
+.sb-g { display: block; font-size: 10.5px; color: #b0aba3; padding: 2px 14px 2px 22px; text-decoration: none; cursor: pointer; border-left: 1.5px solid transparent; transition: color .15s, border-color .15s; }
+.sb-g:hover { color: #555; }
+.sb-g.active { color: #1a1a1a; border-left-color: #888; }
+.sb-b { display: block; font-size: 10px; color: #ccc; padding: 1.5px 14px 1.5px 30px; text-decoration: none; cursor: pointer; border-left: 1.5px solid transparent; transition: color .15s, border-color .15s; line-height: 1.4; }
+.sb-b:hover { color: #666; }
+.sb-b.active { color: #444; border-left-color: #c0bdb6; }
+.sb-event { color: #bbb; font-weight: 400; }
+
+/* PAGE */
+.page { max-width: 800px; margin: 0 auto; background: #fff; border: 0.5px solid #dddbd4; }
+.hdr { padding: 36px 52px 28px; border-bottom: 1px solid #1a1a1a; }
+.hdr h1 { font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
+.hdr h2 { font-size: 26px; font-weight: 400; margin-bottom: 6px; }
+.hdr-sub { font-size: 12px; color: #777; }
+
+.toc-vis { padding: 20px 52px; background: #f7f6f2; border-bottom: 0.5px solid #dddbd4; display: flex; gap: 40px; }
+.tc { flex: 1; }
+.tc-l { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 7px; padding-bottom: 5px; border-bottom: 0.5px solid #dddbd4; }
+.tc-r { font-size: 12px; color: #555; padding: 2.5px 0; display: flex; gap: 8px; }
+.tc-r .n { color: #bbb; min-width: 14px; }
+
+.sec { padding: 44px 52px; border-bottom: 0.5px solid #dddbd4; }
+.sec:last-child { border-bottom: none; }
+.sec-title { font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #999; margin-bottom: 32px; padding-bottom: 12px; border-bottom: 1px solid #1a1a1a; }
+
+.sub-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; background: #1a1a1a; display: inline-block; padding: 4px 12px; margin-bottom: 24px; margin-top: 4px; }
+.sub-lbl.lt { background: #e8e5de; color: #555; }
+
+.g-hd { font-size: 10px; letter-spacing: 0.13em; text-transform: uppercase; color: #aaa; margin: 28px 0 14px; padding-top: 20px; border-top: 0.5px solid #ece9e2; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.g-hd:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+.g-hd .gr { font-size: 10px; color: #ccc; font-weight: 400; letter-spacing: 0; text-transform: none; }
+
+.b-hd { font-size: 12px; font-weight: 500; color: #1a1a1a; margin: 18px 0 10px; padding-bottom: 8px; border-bottom: 0.5px solid #ece9e2; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.item { padding: 15px 0; border-bottom: 0.5px solid #f0ede6; display: grid; grid-template-columns: 128px 1fr; gap: 20px; }
+.item:last-child { border-bottom: none; }
+.i-brand { font-size: 12px; font-weight: 500; color: #1a1a1a; margin-bottom: 5px; line-height: 1.3; }
+.tag { display: inline-block; font-size: 10px; padding: 2px 7px; border: 0.5px solid #c8c4bc; color: #777; margin-bottom: 3px; margin-right: 3px; }
+.tag.alert { border-color: #c0a080; color: #8a6030; background: #fdf8f0; }
+.tag.new { border-color: #8aaa8a; color: #3a6a3a; background: #f0f7f0; }
+.tag.geo { border-color: #a0a0c8; color: #404080; background: #f0f0fc; }
+
+.i-hl { font-size: 13px; font-weight: 500; color: #1a1a1a; margin-bottom: 7px; line-height: 1.4; }
+.i-body { font-size: 13px; color: #444; line-height: 1.65; margin-bottom: 8px; }
+.i-body ul { list-style: none; padding: 0; }
+.i-body ul li { padding-left: 15px; position: relative; margin-bottom: 3px; }
+.i-body ul li::before { content: '-'; position: absolute; left: 0; color: #c0bdb6; }
+.insight { font-size: 12px; color: #4a4a4a; background: #f7f6f2; border-left: 2px solid #c8c4bc; padding: 7px 12px; margin-top: 8px; line-height: 1.6; }
+.insight::before { content: 'Key Takeaway: '; color: #888; }
+.src { font-size: 11px; color: #aaa; margin-top: 8px; line-height: 1.6; }
+.src a { color: #888; text-decoration: underline; text-underline-offset: 2px; }
+.src a:hover { color: #333; }
+
+/* MACRO */
+.mac-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 8px; }
+.mc { border: 0.5px solid #dddbd4; padding: 18px; }
+.mc.wide { grid-column: 1 / -1; }
+.mc.geo { border-color: #a8a8cc; background: #f8f8fc; }
+.mc-num { font-size: 10px; letter-spacing: 0.12em; color: #bbb; text-transform: uppercase; margin-bottom: 5px; }
+.mc-hl { font-size: 13px; font-weight: 500; color: #1a1a1a; margin-bottom: 8px; line-height: 1.4; }
+.mc-stat { font-size: 22px; font-weight: 400; color: #1a1a1a; margin-bottom: 3px; }
+.mc-stat-lbl { font-size: 11px; color: #888; margin-bottom: 10px; }
+.mc-body { font-size: 12px; color: #555; line-height: 1.65; }
+.mc-body ul { list-style: none; padding: 0; margin-top: 5px; }
+.mc-body ul li { padding-left: 13px; position: relative; margin-bottom: 3px; }
+.mc-body ul li::before { content: '-'; position: absolute; left: 0; color: #c0bdb6; }
+.mc-ins { font-size: 11.5px; color: #4a4a4a; background: #f7f6f2; border-left: 2px solid #c8c4bc; padding: 6px 10px; margin-top: 10px; line-height: 1.55; }
+.mc-ins::before { content: 'Key Takeaway: '; color: #888; }
+.mc-ins.red { background: #fdf5f0; border-left-color: #c8a080; }
+.mc-src { font-size: 10.5px; color: #bbb; margin-top: 7px; line-height: 1.6; }
+.mc-src a { color: #999; text-decoration: underline; text-underline-offset: 2px; }
+.mc-src a:hover { color: #333; }
+
+.footer { padding: 26px 52px; border-top: 1px solid #1a1a1a; display: flex; justify-content: space-between; align-items: center; }
+.footer-l { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #999; }
+.footer-r { font-size: 11px; color: #bbb; font-style: italic; }
+
+@media print { body { background: white; padding: 0; } .page { border: none; } .sb { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sb" id="tocSb">
+  <div class="sb-title">Table of Contents</div>
+  <div class="sb-part">Part I · Competitive Landscape</div>
+
+  <a class="sb-a" href="#sec-1a">A · China Market</a>
+
+    <a class="sb-g" href="#g-riche-cn">Richemont</a>
+      <a class="sb-b" href="#b-cartier-cn">Cartier <span class="sb-event">· Taipei Dinner</span></a>
+      <a class="sb-b" href="#b-vca-cn">VCA <span class="sb-event">· HK Watchmaking</span></a>
+      <a class="sb-b" href="#b-vca-minerals">VCA <span class="sb-event">· Shanghai Minerals</span></a>
+      <a class="sb-b" href="#b-buccellati-cn">Buccellati <span class="sb-event">· Shanghai Retro.</span></a>
+      <a class="sb-b" href="#b-vhernier-cn">Vhernier <span class="sb-event">· HK 1st Boutique</span></a>
+
+    <a class="sb-g" href="#g-lvmh-cn">LVMH</a>
+      <a class="sb-b" href="#b-tiffany-flagship">Tiffany &amp; Co. <span class="sb-event">· Beijing Flagship</span></a>
+      <a class="sb-b" href="#b-tiffany-dinner">Tiffany &amp; Co. <span class="sb-event">· Opening Dinner</span></a>
+      <a class="sb-b" href="#b-tiffany-exhibition">Tiffany &amp; Co. <span class="sb-event">· Birds in Bloom</span></a>
+      <a class="sb-b" href="#b-fred-cn">Fred <span class="sb-event">· 90th Anniv. Beijing</span></a>
+
+    <a class="sb-g" href="#g-kering-cn">Kering</a>
+      <a class="sb-b" href="#b-kering-grp">Group <span class="sb-event">· Jewelry Division</span></a>
+      <a class="sb-b" href="#b-boucheron-flagship">Boucheron <span class="sb-event">· Shanghai Flagship</span></a>
+      <a class="sb-b" href="#b-qeelin-cn">Qeelin <span class="sb-event">· CNY HJ Collection</span></a>
+
+    <a class="sb-g" href="#g-ind-cn">Independent Brands</a>
+      <a class="sb-b" href="#b-hw-cn">Harry Winston <span class="sb-event">· Year of Horse</span></a>
+
+    <a class="sb-g" href="#g-local-cn">Local High-End Jewelry</a>
+      <a class="sb-b" href="#b-laopu">Laopu Gold <span class="sb-event">· Performance</span></a>
+
+  <div class="sb-div"></div>
+
+  <a class="sb-a" href="#sec-1b">B · International</a>
+
+    <a class="sb-g" href="#g-riche-intl">Richemont</a>
+      <a class="sb-b" href="#b-cartier-paris">Cartier <span class="sb-event">· Paris HC Week</span></a>
+      <a class="sb-b" href="#b-cartier-rome">Cartier <span class="sb-event">· Rome Exhibition</span></a>
+      <a class="sb-b" href="#b-vca-paris">VCA <span class="sb-event">· Paris Vendôme</span></a>
+
+    <a class="sb-g" href="#g-lvmh-intl">LVMH</a>
+      <a class="sb-b" href="#b-bulgari-oscars">Bvlgari <span class="sb-event">· Eclettica Oscars</span></a>
+      <a class="sb-b" href="#b-bulgari-milan">Bvlgari <span class="sb-event">· Milan Launch</span></a>
+      <a class="sb-b" href="#b-chaumet-intl">Chaumet <span class="sb-event">· Envol Collection</span></a>
+      <a class="sb-b" href="#b-dior-intl">Dior <span class="sb-event">· Belle Dior Launch</span></a>
+
+    <a class="sb-g" href="#g-debeers">De Beers London <span class="sb-event">· Paris Flagship</span></a>
+
+    <a class="sb-g" href="#g-industry">Industry Events</a>
+      <a class="sb-b" href="#b-ww">Watches &amp; Wonders <span class="sb-event">· Geneva 2026</span></a>
+
+  <div class="sb-div"></div>
+  <div class="sb-part">Part II · Macro Environment</div>
+  <a class="sb-b" style="padding-left:14px;" href="#mac01">01 · Hainan (China) Free Trade Port</a>
+  <a class="sb-b" style="padding-left:14px;" href="#mac02">02 · China Two Sessions &amp; Tax</a>
+  <a class="sb-b" style="padding-left:14px;" href="#mac03">03 · Gold &amp; China HNWI</a>
+  <a class="sb-b" style="padding-left:14px;" href="#mac04">04 · Market Stratification</a>
+  <a class="sb-b" style="padding-left:14px;" href="#mac05">05 · US–Iran Conflict</a>
+  <a class="sb-b" style="padding-left:14px;" href="#mac06">06 · Natural Diamond Crisis</a>
+  <a class="sb-b" style="padding-left:14px;" href="#mac07">07 · Japan Market</a>
+</nav>
+
+
+<!-- PAGE -->
+<div class="page">
+
+  <div class="hdr">
+    <h1>Cartier · High End Division</h1>
+    <h2>Market Intelligence Monthly</h2>
+    <div class="hdr-sub">Issue 01 · April 2026 · Coverage Period: 2026 Q1</div>
+  </div>
+
+  <div class="toc-vis">
+    <div class="tc">
+      <div class="tc-l">Part I — Competitive Landscape</div>
+      <div class="tc-r"><span class="n">A</span>China Market: Richemont · LVMH · Kering · Independent Brands · Local Players</div>
+      <div class="tc-r"><span class="n">B</span>International: Global HJ Launches · New Flagships · Strategic Moves</div>
+    </div>
+    <div class="tc">
+      <div class="tc-l">Part II — Macro Environment</div>
+      <div class="tc-r"><span class="n">1</span>Hainan (China) Free Trade Port: Q1 Sales +25.7%</div>
+      <div class="tc-r"><span class="n">2</span>China's Two Sessions: Consumption Tax Shift &amp; Domestic Demand Stimulus</div>
+      <div class="tc-r"><span class="n">3</span>Gold at All-Time Highs &amp; China HNWI Psychological Shift</div>
+      <div class="tc-r"><span class="n">4</span>Market Stratification: High-End Resilience vs. Local Brand Rise</div>
+      <div class="tc-r"><span class="n">5</span>US–Iran Conflict: Middle East Luxury Market Under Pressure</div>
+      <div class="tc-r"><span class="n">6</span>Natural Diamond Crisis: Lab-Grown Structural Disruption</div>
+      <div class="tc-r"><span class="n">7</span>Japan Market: Arbitrage Flows Diverting Chinese Clientele</div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 1 ═══ -->
+  <div class="sec">
+    <div class="sec-title">Part I · Competitive Landscape</div>
+
+    <div id="sec-1a" class="sub-lbl">A · China Market</div>
+
+    <!-- RICHEMONT CN -->
+    <div id="g-riche-cn" class="g-hd">Richemont <span class="gr">Cartier · Van Cleef &amp; Arpels · Buccellati · Vhernier</span></div>
+
+    <div id="b-cartier-cn" class="b-hd">Cartier</div>
+    <div class="item">
+      <div><div class="i-brand">Cartier</div><span class="tag">HJ Dinner</span><span class="tag">Taipei</span></div>
+      <div>
+        <div class="i-hl">En Équilibre High Jewelry Dinner · Taipei · 350+ Pieces (March 2026)</div>
+        <div class="i-body">The En Équilibre collection celebrated its final Greater China launch dinner in Taipei, showcasing over 350 high jewelry and haute horlogerie pieces. Both global ambassadors attended simultaneously: Gemma Chan (since May 2025) and Hyunjin (Stray Kids, since September 2024). Hyunjin appeared in a minimalist black suit paired with a Cartier heritage brooch and haute horlogerie timepiece, continuing his signature style of interpreting Cartier aesthetics through "restraint and radiance."</div>
+        <div class="src">Sources: <a href="https://www.redcarpet-fashionawards.com/2026/03/30/gemma-chan-wore-steve-o-smith-to-the-cartier-high-jewelry-taipei-event/" target="_blank">redcarpet-fashionawards.com · 30/03/2026</a> · <a href="https://www.threads.com/@suremagazine/post/DWUTc8fAW3M" target="_blank">Sure Magazine Korea · 03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-vca-cn" class="b-hd">Van Cleef &amp; Arpels</div>
+    <div class="item">
+      <div><div class="i-brand">VCA</div><span class="tag">Watchmaking Exhibition</span><span class="tag">Hong Kong</span></div>
+      <div>
+        <div class="i-hl">"Poetry of Time" Watchmaking Exhibition · Hong Kong Central Pier 4 (Jan 24 – Feb 8)</div>
+        <div class="i-body">Van Cleef &amp; Arpels staged an immersive watchmaking exhibition at Hong Kong's Central Pier 4, highlighting the Planétarium Automaton (featuring the sun and six planets in real-time mechanical motion) and the Lady Arpels Pont des Amoureux automaton watch. Previously shown in Dubai in December 2025, Hong Kong was the first Asian stop, with free admission by appointment and a signature pastry café corner.</div>
+        <div class="src">Sources: <a href="https://www.vancleefarpels.com/hk/en/the-maison/exhibitions/poetry-of-time-hong-kong.html" target="_blank">vancleefarpels.com · 08/01/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-vca-minerals"></div>
+    <div class="item">
+      <div><div class="i-brand">VCA / L'École</div><span class="tag">Minerals Exhibition</span><span class="tag">Shanghai</span></div>
+      <div>
+        <div class="i-hl">"Journey with Minerals" · L'École Shanghai, Huaihai Middle Road (Nov 25 – Mar 29)</div>
+        <div class="i-body">L'École, the school of jewelry arts supported by Van Cleef &amp; Arpels, presented "Journey with Minerals" at its Shanghai Twin Villas on Huaihai Middle Road, assembling 70 rare mineral specimens, high jewelry pieces and artworks, including specimens from the Paris School of Mines' 230-year-old collection. The Shanghai edition added 16 mineral specimens and 16 jewelry art pieces versus the 2024 Hong Kong premiere, with special integration of Chinese bronze artifacts and jadeite jewelry.</div>
+        <div class="insight">L'École is VCA's core tool for systematically cultivating future collectors in China; such educational high jewelry exhibitions serve the dual purpose of brand building and clientele cultivation.</div>
+        <div class="src">Sources: <a href="https://www.vancleefarpels.com/bh/en/the-maison/newsroom/journey-with-minerals-in-shanghai.html" target="_blank">vancleefarpels.com · 25/11/2025</a> · <a href="https://jingdaily.com/intels/2025-11/27/van-cleef-and-arpels-opens-minerals-show-in-shanghai" target="_blank">jingdaily.com · 27/11/2025</a></div>
+      </div>
+    </div>
+
+    <div id="b-buccellati-cn" class="b-hd">Buccellati</div>
+    <div class="item">
+      <div><div class="i-brand">Buccellati</div><span class="tag">Retrospective</span><span class="tag">Shanghai</span></div>
+      <div>
+        <div class="i-hl">"The Prince of Goldsmiths" Retrospective · Shanghai Exhibition Center (Dec 7 – Jan 5)</div>
+        <div class="i-body">Buccellati presented 250 exquisite high jewelry and silverware pieces at the Shanghai Exhibition Center, spotlighting its signature "Tulle" gold-weaving technique, staged by Balich Wonder Studio. The exhibition was divided into three chapters — "The Wonder of Special Occasions," "The Wonder of Beauty and Proportion," and "The Wonder of Classical Heritage" — following its 2024 Venice premiere before arriving in China.</div>
+        <div class="src">Sources: <a href="https://www.richemont.com/news-media/press-releases-news/buccellati-opens-the-prince-of-goldsmiths-exhibition-in-shanghai/" target="_blank">richemont.com · 03/12/2025</a></div>
+      </div>
+    </div>
+
+    <div id="b-vhernier-cn" class="b-hd">Vhernier</div>
+    <div class="item">
+      <div><div class="i-brand">Vhernier</div><span class="tag new">New Entrant</span><span class="tag">HK Peninsula</span></div>
+      <div>
+        <div class="i-hl">First Asia-Pacific Boutique · The Peninsula Hong Kong (Nov 18, 2025) · Shanghai &amp; Beijing Planned for Spring 2026</div>
+        <div class="i-body"><ul>
+          <li>Richemont's Italian sculptural jewelry brand Vhernier (acquired by Richemont in 2024) opened an 84 sqm Asia-Pacific debut boutique at The Peninsula Tsim Sha Tsui, its 17th boutique worldwide; the space features Bolzano stone and terrazzo paying homage to Milanese palazzo aesthetics, with a dedicated De Vecchi Milano 1935 silverware showroom</li>
+          <li>Core collections: sculptural Abbraccio, minimalist Calla, and the new architectural high jewelry line Ardis</li>
+          <li>Asia-Pacific MD Sven Johannsen confirmed plans to open one boutique each in Shanghai and Beijing in Spring 2026</li>
+        </ul></div>
+        <div class="insight">Richemont's brand portfolio continues to expand; Vhernier's boutique rollout in Shanghai and Beijing in 2026 warrants ongoing monitoring.</div>
+        <div class="src">Sources: <a href="https://www.richemont.com/news-media/press-releases-news/vhernier-opens-its-first-boutique-in-asia/" target="_blank">richemont.com · 28/11/2025</a> · <a href="https://news.jewellerynet.com/en/jnanews/news/26857/112425-Vhernier-enters-Asian-market-with-first-HK-boutique" target="_blank">jewellerynet.com · 24/11/2025</a></div>
+      </div>
+    </div>
+
+    <!-- LVMH CN -->
+    <div id="g-lvmh-cn" class="g-hd">LVMH <span class="gr">Tiffany &amp; Co. · Fred</span></div>
+
+    <div id="b-tiffany-flagship" class="b-hd">Tiffany &amp; Co.</div>
+    <div class="item">
+      <div><div class="i-brand">Tiffany &amp; Co.</div><span class="tag new">Flagship Opening</span><span class="tag">Beijing Sanlitun</span></div>
+      <div>
+        <div class="i-hl">Beijing Taikoo Li Sanlitun Flagship Opening · 1,000 sqm, Four Floors · MVRDV Glass Fin Façade (Mar 14, 2026)</div>
+        <div class="i-body"><ul>
+          <li>Dutch architecture firm MVRDV designed a 20-meter-tall undulating glass fin façade inspired by Elsa Peretti's iconic Bone Cuff bracelet, with locally produced recyclable glass that shifts through different Tiffany Blue tones with changing light; the Beijing store is MVRDV's fifth flagship for Tiffany</li>
+          <li>Opening guests: Global Ambassador Zhang Ziyi, China Ambassadors Tang Wei &amp; Zhang Ruoyun, China Brand Ambassadors Zhong Chuxi &amp; Song Yuqi &amp; Li Yunrui &amp; Wang Xingyue</li>
+          <li>In-store displays include a 1900 Tiffany dogwood table lamp, Chinese artist Wang Xiyao's "Endless Blue No. 3," and other collectibles; British sculptor Tony Cragg's bronze "Pair" sculpture guides visitors upward</li>
+        </ul></div>
+        <div class="src">Sources: <a href="https://wwd.com/accessories-news/jewelry/tiffany-amp-co-celebrates-taikoo-li-sanlitun-flagship-china-1238679387/" target="_blank">wwd.com · 16/03/2026</a> · <a href="https://www.chinadaily.com.cn/a/202603/18/WS69ba6462a310d6866eb3e852.html" target="_blank">chinadaily.com.cn · 18/03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-tiffany-dinner"></div>
+    <div class="item">
+      <div><div class="i-brand">Tiffany &amp; Co.</div><span class="tag">Private Dinner</span><span class="tag">Beijing</span></div>
+      <div>
+        <div class="i-hl">Opening Private Dinner · National Convention Center Phase II Rooftop "Qi Yuan" Garden (Mar 14, 2026 Evening)</div>
+        <div class="i-body">On the evening of the flagship opening, Tiffany hosted an exclusive private dinner at the "Qi Yuan" (栖园) rooftop garden of the National Convention Center Phase II (designed by Xiangshan School craftsman Xue Lingen, a renowned Chinese traditional garden design school blending Suzhou-style layout with modern techniques). Global Ambassador Zhang Ziyi along with China and brand ambassadors attended, extending the high-end opening experience.</div>
+        <div class="src">Sources: <a href="https://www.chinadaily.com.cn/a/202603/18/WS69ba6462a310d6866eb3e852.html" target="_blank">chinadaily.com.cn · 18/03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-tiffany-exhibition"></div>
+    <div class="item">
+      <div><div class="i-brand">Tiffany &amp; Co.</div><span class="tag">HJ Exhibition</span><span class="tag new">Now Open</span></div>
+      <div>
+        <div class="i-hl">"Birds in Bloom" Heritage Exhibition · Beijing Taikoo Li Sanlitun Flagship (Apr 1 – May 27)</div>
+        <div class="i-body"><ul>
+          <li>Focused on legendary designer Jean Schlumberger's botanical and avian themes, showcasing archival high jewelry: sapphire and turquoise necklaces, floral brooches, and the iconic "Bird on a Rock" design; four creative window displays featuring Schlumberger fish brooches and Louis Comfort Tiffany's historic stained glass lamps</li>
+          <li>Selected pieces simultaneously exhibited at Beijing SKP and Shanghai IFC Mall boutiques (Mar 14 – May 27)</li>
+        </ul></div>
+        <div class="insight">Tiffany's three-phase approach — "flagship opening + private dinner + nearly two-month exhibition" — maintains sustained HNWI engagement in Beijing; the coordination of ambassador resources and exhibition content is a noteworthy reference.</div>
+        <div class="src">Sources: <a href="https://jingdaily.com/intels/2026-03/18/tiffany-to-showcase-antique-collection-at-its-beijing-flagship" target="_blank">jingdaily.com · 18/03/2026</a> · <a href="https://www.thebeijinger.com/events/2026/mar/bird-rock-tiffany-co-heritage-exhibition" target="_blank">thebeijinger.com</a></div>
+      </div>
+    </div>
+
+    <div id="b-fred-cn" class="b-hd">Fred</div>
+    <div class="item">
+      <div><div class="i-brand">Fred</div><span class="tag new">Now Open</span><span class="tag">Beijing First Stop</span></div>
+      <div>
+        <div class="i-hl">Brand's 90th Anniversary + Force 10's 60th Anniversary · High Jewelry Touring Exhibition, Beijing First Stop</div>
+        <div class="i-body"><ul>
+          <li>In 2026, Fred simultaneously celebrates the brand's 90th anniversary and Force 10's 60th anniversary, launching a global commemorative touring exhibition with Beijing as the China first stop</li>
+          <li>17 new Force 10 high jewelry creations unveiled, including XL oversized pieces, Pompom tassel designs, and Fred Hero Cut diamonds</li>
+          <li>A Year of the Horse limited-edition Force 10 Rise necklace (set with rubies) has been styled by brand ambassadors Guan Xiaotong and Ju Jingyi, pre-heating the 90th anniversary milestone</li>
+        </ul></div>
+        <div class="src">Sources: <a href="https://www.harpersbazaar.com.sg/jewels-watches/jewellery/best-high-jewellery-collections-2026" target="_blank">harpersbazaar.com.sg · 30/01/2026</a> · <a href="https://jingdaily.com/intels/2025-12/18/fred-launches-chinese-new-year-force-10-jewelry-collection" target="_blank">jingdaily.com · 18/12/2025</a></div>
+      </div>
+    </div>
+
+    <!-- KERING CN -->
+    <div id="g-kering-cn" class="g-hd">Kering <span class="gr">Kering Jewelry Division · Boucheron · Qeelin</span></div>
+
+    <div id="b-kering-grp" class="b-hd">Kering Group <span class="tag alert" style="font-size:10px;margin-left:4px;">Structural Change</span></div>
+    <div class="item">
+      <div><div class="i-brand">Kering Group</div><span class="tag alert">Strategic Move</span></div>
+      <div>
+        <div class="i-hl">Official Establishment of Kering Jewelry as Independent Division, Elevating Jewelry to Group Strategic Pillar (2026 Q1)</div>
+        <div class="i-body"><ul>
+          <li>Consolidated Boucheron, Pomellato, Dodo, and Qeelin into an independent Kering Jewelry division, appointing Jean-Marc Duplaix as inaugural CEO; financial data reported separately starting Q1 2026</li>
+          <li>Kering FY2025 overall revenue declined 13% (primarily dragged by Gucci), but jewelry brands achieved double-digit growth in Q4, with four brands' combined annual revenue reaching approximately €1 billion</li>
+          <li>Capital Markets Day scheduled for April 16 to present the full strategic plan</li>
+        </ul></div>
+        <div class="insight">All of Boucheron's and Qeelin's activities in China will now receive stronger group resource backing — this represents a structural shift in the competitive landscape.</div>
+        <div class="src">Sources: <a href="https://wwd.com/business-news/human-resources/kering-jewelry-division-ceo-jean-marc-duplaix-1238679299/" target="_blank">wwd.com · 17/03/2026</a> · <a href="https://jingdaily.com/intels/2026-03/17/kering-creates-new-jewelry-division" target="_blank">jingdaily.com · 17/03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-boucheron-flagship" class="b-hd">Boucheron</div>
+    <div class="item">
+      <div><div class="i-brand">Boucheron</div><span class="tag new">Flagship Opening</span><span class="tag">Shanghai Xintiandi</span></div>
+      <div>
+        <div class="i-hl">First China Flagship, Third Globally · Shanghai Xintiandi, Historic Shikumen (石库门) Building (Mar 23, 2026)</div>
+        <div class="i-body"><ul>
+          <li>278 sqm, set in a 19th-century Shikumen building (Shanghai's heritage lane-house architecture); French "Winter Garden" entrance + Chinese moon gate; feng shui-planned circulation; second-floor VIP salon preserving original beam-and-column structure with De Gournay Chinese landscape wallpaper</li>
+          <li>CEO Hélène Poulit-Duquesne: "This is not a destination — it's a springboard"; the brand currently operates 17 boutiques in mainland China</li>
+        </ul></div>
+        <div class="src">Sources: <a href="https://www.luxurydaily.com/boucheron-opens-first-flagship-in-china" target="_blank">luxurydaily.com · 23/03/2026</a> · <a href="https://ouispeakfashion.com/boucheron-opens-its-first-flagship-boutique-in-china-in-shanghais-xintiandi/" target="_blank">ouispeakfashion.com</a></div>
+      </div>
+    </div>
+
+    <div id="b-qeelin-cn" class="b-hd">Qeelin</div>
+    <div class="item">
+      <div><div class="i-brand">Qeelin</div><span class="tag">CNY Collection</span></div>
+      <div>
+        <div class="i-hl">"Xi Xi" Chinese New Year High Jewelry Collection · Lion Dance Culture × White Gold + Diamonds + Emeralds + Rubies</div>
+        <div class="i-body">Qeelin translated traditional Chinese lion dance culture into a high jewelry language, using white gold, diamonds, emeralds, and rubies to convey cultural narratives of courage and guardianship. As Kering's most culturally localized jewelry brand, it represents the frontier of deep localization by international high jewelry groups.</div>
+        <div class="src">Sources: <a href="https://www.qeelin.com/fr/fine-jewellery/collections/xi-xi" target="_blank">qeelin.com · 13/01/2026</a></div>
+      </div>
+    </div>
+
+    <!-- INDEPENDENT CN -->
+    <div id="g-ind-cn" class="g-hd">Independent / Family-Owned Brands <span class="gr">Harry Winston</span></div>
+
+    <div id="b-hw-cn" class="b-hd">Harry Winston</div>
+    <div class="item">
+      <div><div class="i-brand">Harry Winston</div><span class="tag">CNY Limited Edition</span></div>
+      <div>
+        <div class="i-hl">Year of the Horse Limited-Edition Watch Automatic 36mm · Rose Gold + Red Grand Feu Enamel · Priced at $81,500</div>
+        <div class="i-body">A diamond-set rose gold timepiece launched for the 2026 Year of the Horse, with a red grand feu enamel dial and hand-engraved gold horse motif at its core, precisely targeting the high-end gifting market during the Chinese New Year consumption window.</div>
+        <div class="src">Sources: <a href="https://www.harrywinston.com/en/themes/2026-cny-gift-guide" target="_blank">harrywinston.com · 20/01/2026</a></div>
+      </div>
+    </div>
+
+    <!-- LOCAL CN -->
+    <div id="g-local-cn" class="g-hd">Chinese Local High-End Jewelry <span class="gr">The Most Critical Market Variable This Quarter</span></div>
+
+    <div id="b-laopu" class="b-hd">Laopu Gold (老铺黄金)</div>
+    <div class="item">
+      <div><div class="i-brand">Laopu Gold</div></div>
+      <div>
+        <div class="i-hl">FY2025 Revenue +220%, Q1 2026 Net Profit Significantly Beats Expectations, 82.4% Client Overlap with Cartier</div>
+        <div class="i-body"><ul>
+          <li><strong>FY2025:</strong> Tax-inclusive revenue RMB 31–32 billion, +220%; net profit RMB 4.8–4.9 billion, +226–233%. Rothschild projects 2025 China sales already surpassing Richemont's jewelry division (including Cartier)</li>
+          <li><strong>Q1 2026 Guidance:</strong> Net profit RMB 3.6–3.8 billion, significantly beating expectations; client overlap with LV, Hermès, Cartier, and Bulgari reaches 82.4% (Frost &amp; Sullivan)</li>
+          <li><strong>Pricing Strategy:</strong> Domestic prices raised 20–30% in February 2026 (three price increases already in 2025); fixed pricing + design premium model continues to strengthen</li>
+          <li><strong>Scale:</strong> Approximately 50 stores covering China's Top 10 luxury malls (100% coverage); plans to open 3–4 overseas stores in Japan and Singapore in 2026</li>
+          <li><strong>Industry Recognition:</strong> Richemont CEO Nicolas Bos described its cultural strategy as "inspiring peers to innovate"; Bernard Arnault visited the Shanghai store and stayed for over 30 minutes</li>
+        </ul></div>
+        <div class="insight">82% client overlap signals direct client competition — not two parallel tracks. Core response: reinforce high jewelry's rare gemstone exclusivity, century-old craftsmanship barriers, and global heritage narrative in top-client communications.</div>
+        <div class="src">Sources: <a href="https://www.investing.com/news/earnings/laopu-gold-1q26-revenue-forecast-beats-expectations-93CH-4575491" target="_blank">investing.com · 23/03/2026</a> · <a href="https://jingdaily.com/posts/china-s-gold-jewelry-market-is-not-shrinking-but-stratifying" target="_blank">jingdaily.com · 07/04/2026</a></div>
+      </div>
+    </div>
+
+
+    <!-- SUB B -->
+    <div id="sec-1b" class="sub-lbl lt" style="margin-top:48px;">B · International (With Relevance to China)</div>
+
+    <!-- RICHEMONT INTL -->
+    <div id="g-riche-intl" class="g-hd">Richemont · Global <span class="gr">Cartier · Van Cleef &amp; Arpels · Group Performance</span></div>
+
+    <div id="b-cartier-paris" class="b-hd">Cartier · Paris Haute Couture Week</div>
+    <div class="item">
+      <div><div class="i-brand">Cartier</div><span class="tag">Global HJ Launch</span><span class="tag">Paris</span></div>
+      <div>
+        <div class="i-hl">En Équilibre Chapter III · Paris Haute Couture Week · Musée des Arts Décoratifs (January 2026)</div>
+        <div class="i-body">The third chapter of the En Équilibre collection was unveiled at the Musée des Arts Décoratifs in Paris, continuing the exploration of "line, balance, and restrained asymmetry." High Jewelry Creative Director Jacqueline Karachi defined it as "the art of restrained distinction," receiving the highest peer ratings during Paris High Jewelry Media Week and ranking among the most globally watched new high jewelry collections of the season.</div>
+        <div class="src">Sources: <a href="https://www.thejewelleryeditor.com/jewellery/article/paris-high-jewelry-presentations-january-2026/" target="_blank">thejewelleryeditor.com · 17/02/2026</a> · <a href="https://www.diamondworld.net/news/cartier-unveils-chapter-iii-of-en-%C3%A9quilibre-high-jewellery-collection-in-paris" target="_blank">diamondworld.net</a></div>
+      </div>
+    </div>
+
+    <div id="b-cartier-rome"></div>
+    <div class="item">
+      <div><div class="i-brand">Cartier</div><span class="tag">Museum Exhibition</span><span class="tag">Rome</span></div>
+      <div>
+        <div class="i-hl">"Cartier &amp; Myths" · Capitoline Museums, Rome · Three Historic Firsts (Nov 14 – Mar 15)</div>
+        <div class="i-body"><ul>
+          <li>Three historic firsts: the Capitoline Museums (Palazzo Nuovo, est. 1734) <strong>hosted a temporary exhibition for the first time in history</strong>; Cartier's <strong>first exhibition in Rome</strong>; Cartier's <strong>first co-display alongside a museum's permanent collection</strong></li>
+          <li>Approximately 300 exhibits: Cartier Collection heritage treasures displayed alongside Cardinal Alessandro Albani's classical sculptures, exploring the profound influence of Greco-Roman mythology on Cartier's creative vision</li>
+          <li>Exhibition design: directed by Sylvain Roca, with special creative contribution from Oscar-winning production designer Dante Ferretti; olfactory installation by Cartier's in-house perfumer Mathilde Laurent</li>
+        </ul></div>
+        <div class="src">Sources: <a href="https://www.museicapitolini.org/en/node/1017133" target="_blank">museicapitolini.org</a> · <a href="https://www.anothermag.com/fashion-beauty/16813/cartier-and-myths-exhibition-review-musei-capitolini-rome" target="_blank">anothermag.com · 11/2025</a></div>
+      </div>
+    </div>
+
+    <div id="b-vca-paris" class="b-hd">Van Cleef &amp; Arpels · Paris Vendôme Heritage Exhibition</div>
+    <div class="item">
+      <div><div class="i-brand">VCA</div><span class="tag">Heritage Exhibition</span><span class="tag">Paris Vendôme</span></div>
+      <div>
+        <div class="i-hl">"Enchanting Time" Heritage Timepiece Exhibition · 20 Place Vendôme, Paris (Jan 16 – Jun 1)</div>
+        <div class="i-body">Van Cleef &amp; Arpels opened a heritage clock and watch exhibition at its Place Vendôme heritage gallery, highlighting rare historical pieces such as the Chinese Magician pocket watch with double retrograde movement, continuously projecting the brand's deep historical legacy to global top-tier media and collectors.</div>
+        <div class="src">Sources: <a href="https://www.vancleefarpels.com/es/en/the-maison/newsroom/enchanting-time-exhibition-vendome.html" target="_blank">vancleefarpels.com · 16/01/2026</a></div>
+      </div>
+    </div>
+
+    <!-- LVMH INTL -->
+    <div id="g-lvmh-intl" class="g-hd">LVMH · Global <span class="gr">Bvlgari · Chaumet · Dior</span></div>
+
+    <div id="b-bulgari-oscars" class="b-hd">Bvlgari · Eclettica Oscars Debut</div>
+    <div class="item">
+      <div><div class="i-brand">Bvlgari</div><span class="tag">Global Debut</span><span class="tag">Oscars Red Carpet</span></div>
+      <div>
+        <div class="i-hl">Eclettica Collection Global Debut · Oscars Red Carpet (Early March 2026)</div>
+        <div class="i-body"><ul>
+          <li>Priyanka Chopra Jonas: 14.01-carat Madagascar sapphire Serpenti Illusio high jewelry necklace with diamonds, emeralds, and onyx</li>
+          <li>Anne Hathaway: 8.02-carat yellow diamond high jewelry necklace</li>
+          <li>Using the Oscars red carpet as a global warm-up ahead of the formal launch, achieving consumer awareness implantation at the highest-density media exposure moment</li>
+        </ul></div>
+        <div class="src">Sources: <a href="https://jewelbuzz.in/bulgari-unveils-eclettica-high-jewellery-at-oscars-2026/" target="_blank">jewelbuzz.in · 17/03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-bulgari-milan"></div>
+    <div class="item">
+      <div><div class="i-brand">Bvlgari</div><span class="tag">Global HJ Launch</span><span class="tag">Milan</span></div>
+      <div>
+        <div class="i-hl">Eclettica High Jewelry Collection Official Launch Dinner · Villa Arconati, Milan (Mar 23, 2026)</div>
+        <div class="i-body"><ul>
+          <li>160+ new high jewelry creations (including 14 transformable pieces, 9 Capolavori masterpieces, 50+ million-dollar jewels); "Artsmanship" concept inspired by sculpture, painting, and architecture</li>
+          <li>Attendees: newly signed ambassador Dua Lipa, Jake Gyllenhaal, Liu Yifei (key Asia ambassador) + Anne Hathaway + Priyanka Chopra Jonas + Kim Ji Won</li>
+          <li>CEO Jean-Christophe Babin: Bvlgari's 2025 was "the best year ever," with 2026 off to a strong start</li>
+        </ul></div>
+        <div class="insight">Bvlgari's two-phase strategy of "Oscars red carpet debut + immersive launch dinner" — stacking two high-density media events — is becoming an industry benchmark; Liu Yifei's attendance precisely channels communication toward the Chinese market.</div>
+        <div class="src">Sources: <a href="https://wwd.com/accessories-news/jewelry/anne-hathaway-dua-lipa-priyanka-chopra-bulgari-milan-1238686019/" target="_blank">wwd.com · 24/03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-chaumet-intl" class="b-hd">Chaumet · Envol Collection</div>
+    <div class="item">
+      <div><div class="i-brand">Chaumet</div><span class="tag">Global HJ</span><span class="tag">Paris</span></div>
+      <div>
+        <div class="i-hl">"Envol" (Taking Flight) High Jewelry Collection 2026 · Grand Feu Enamel + Midnight Blue Sapphires · Nearly 250 Years of Craftsmanship</div>
+        <div class="i-body">Chaumet took "wings" as its central motif, combining precision grand feu enamel craftsmanship with midnight blue sapphires for its 2026 Envol high jewelry collection, with a detachable transformable heron tiara presented during Paris Haute Couture Week. CEO Charles Leung: "(The market recovery) came faster than we expected."</div>
+        <div class="src">Sources: <a href="https://www.chaumet.com/gb_en/envol" target="_blank">chaumet.com · 30/03/2026</a></div>
+      </div>
+    </div>
+
+    <div id="b-dior-intl" class="b-hd">Dior Joaillerie · Belle Dior</div>
+    <div class="item">
+      <div><div class="i-brand">Dior Joaillerie</div><span class="tag">Global HJ</span><span class="tag">Paris</span></div>
+      <div>
+        <div class="i-hl">"Belle Dior" High Jewelry Collection 2026 · 57 Unique Pieces · Victoire de Castellane · Paris (January 2026)</div>
+        <div class="i-body">Victoire de Castellane translated haute couture techniques (tassels, pleats, embroidery) into jewelry language: 57 unique pieces spanning three intertwined universes — celestial (yellow diamond sun + black opal moon), botanical garden (flora + fauna), and haute couture itself. Extensive transformable designs (bracelet ↔ necklace, brooch ↔ hair ornament), with Dior's signature lacquer treatment creating a "jewelry stained glass" effect.</div>
+        <div class="src">Sources: <a href="https://couturenotebook.com/best-haute-couture-blog/belle-dior-2026-jewellery" target="_blank">couturenotebook.com · 26/01/2026</a> · <a href="https://katerinaperez.com/articles/belle-dior-high-jewellery-collection" target="_blank">katerinaperez.com · 04/02/2026</a></div>
+      </div>
+    </div>
+
+    <!-- DE BEERS -->
+    <div id="g-debeers" class="g-hd">De Beers London <span class="gr">12 Rue de la Paix — Directly Facing Cartier No. 13 Flagship</span></div>
+    <div class="item">
+      <div><div class="i-brand">De Beers London</div><span class="tag new">Largest Global Flagship</span><span class="tag alert">Facing Cartier</span></div>
+      <div>
+        <div class="i-hl">12 Rue de la Paix Flagship Opening (January 2026) · Directly Facing Cartier No. 13 Flagship</div>
+        <div class="i-body"><ul>
+          <li>464 sqm, three floors, the brand's largest flagship globally; located at 12 Rue de la Paix, directly facing Cartier's No. 13 flagship</li>
+          <li>Designed by Pierre-Yves Rochon, interior walls clad in Botswana kimberlite, with Okavango Delta art references throughout; brand simultaneously rebranded to "De Beers London" and launched the "Earth Made" natural diamond narrative</li>
+          <li><strong>Anglo American divestiture ongoing:</strong> The group is advancing the sale or spin-off of De Beers Group, with potential buyers in negotiations; the new owner's strategic direction will directly impact its future competitive posture</li>
+        </ul></div>
+        <div class="insight">De Beers' positioning on the Rue de la Paix axis places it directly in Paris's top-tier jewelry competition arena; the Anglo American sale outcome warrants close attention — the new owner's strategic resources and positioning will determine its medium-to-long-term competitiveness.</div>
+        <div class="src">Sources: <a href="https://wwd.com/business-news/retail/de-beers-london-paris-flagship-opening-retail-concept-1238463146/" target="_blank">wwd.com · 19/01/2026</a> · <a href="https://news.centurionjewelry.com/articles/detail/de-beers-london-opens-largest-global-flagship-on-rue-de-la-paix" target="_blank">centurionjewelry.com</a> · <a href="https://www.debeersgroup.com/news-insights/latest-group-news/2026/preliminary-financial-results-for-2025" target="_blank">debeersgroup.com · 2026/02</a></div>
+      </div>
+    </div>
+
+    <!-- INDUSTRY -->
+    <div id="g-industry" class="g-hd">Industry Events <span class="gr">Watches &amp; Wonders Geneva 2026</span></div>
+
+    <div id="b-ww" class="b-hd">Watches &amp; Wonders Geneva 2026</div>
+    <div class="item">
+      <div><div class="i-brand">W&amp;W Geneva</div><span class="tag">Now Open</span><span class="tag">Geneva</span></div>
+      <div>
+        <div class="i-hl">Watches &amp; Wonders Geneva 2026 (Apr 14–20) · 65 Brands · 60,000+ Expected Visitors</div>
+        <div class="i-body"><ul>
+          <li>65 exhibiting brands, 60,000 expected visitors, 1,700 journalists, 6,000+ retailers; nearly 50,000 hotel room nights booked</li>
+          <li>Top highlight: Audemars Piguet returns to the salon after years, reuniting the "Holy Trinity" (AP, Patek Philippe, Vacheron Constantin)</li>
+          <li>Van Cleef &amp; Arpels presents "Poetry of the Heavens" at Watches &amp; Wonders for the first time globally; Cartier continues to attract intense media and collector attention through its fusion of jewelry heritage and precision watchmaking</li>
+        </ul></div>
+        <div class="insight">Watches &amp; Wonders Geneva is our most important annual window for direct dialogue with top global media, retailers, and collectors; detailed launch coverage will be featured in the next monthly report.</div>
+        <div class="src">Sources: <a href="https://www.watchesandwonders.com/en/geneva-2026/event" target="_blank">watchesandwonders.com</a> · <a href="https://www.richemont.com/news-media/press-releases-news/watches-and-wonders-geneva-2026-opens-its-doors-in-five-days/" target="_blank">richemont.com · 09/04/2026</a></div>
+      </div>
+    </div>
+
+  </div><!-- /sec 1 -->
+
+
+  <!-- ═══ SECTION 2 — MACRO ═══ -->
+  <div class="sec">
+    <div class="sec-title">Part II · Macro Environment</div>
+    <div class="mac-grid">
+
+      <div id="mac01" class="mc wide">
+        <div class="mc-num">Macro 01</div>
+        <div class="mc-hl">Hainan (China) Free Trade Port First Quarter: Offshore Duty-Free Sales +25.7% (2026 Q1)</div>
+        <div class="mc-stat">+25.7%</div>
+        <div class="mc-stat-lbl">2026 Q1 offshore duty-free sales YoY growth, reaching RMB 14.21 billion (~US$2.06 billion)</div>
+        <div class="mc-body"><ul>
+          <li><strong>Dec 18, 2025 — Port Closure Implemented:</strong> Full-island independent customs territory officially operational; duty-free tariff line items expanded from ~1,900 to ~6,600 (covering 74% of import/export categories)</li>
+          <li><strong>2026 New Year Holiday (3 days):</strong> Offshore duty-free sales RMB 712 million, +128.9%; 83,500 shoppers, +60.6%</li>
+          <li><strong>30% Value-Add Duty Exemption Policy (Strategic Opportunity):</strong> Jewelry brands establishing luxury packaging assembly, haute maintenance, or regional distribution hubs in Hainan can achieve full import duty exemption once local value-add reaches 30%</li>
+          <li><strong>Consumer Savings Range:</strong> Watches ~20–28%, handbags ~25–30% (vs. mainland China boutiques)</li>
+        </ul>
+        <div class="mc-ins">Hainan's port closure is diverting a portion of China's HNWI clientele from domestic high jewelry consumption, while simultaneously creating a new venue for engaging these clients — top clients' consumption behaviors and experience preferences in Hainan merit incorporation into clientele insights.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://moodiedavittreport.com/hainan-offshore-duty-free-maintains-heady-start-to-2026-as-q1-sales-soar-25-7/" target="_blank">moodiedavittreport.com</a> · <a href="https://english.www.gov.cn/news/202512/18/content_WS6943ac7dc6d00ca5f9a082cb.html" target="_blank">english.www.gov.cn · 18/12/2025</a></div>
+      </div>
+
+      <div id="mac02" class="mc">
+        <div class="mc-num">Macro 02</div>
+        <div class="mc-hl">China's Two Sessions 2026 (两会): GDP Target 4.5–5%, Consumption Tax "Downstream Shift" Reform Initiated</div>
+        <div class="mc-body"><ul>
+          <li><strong>Macro Setting (China):</strong> GDP growth target 4.5–5.0%; establishment of RMB 100 billion domestic demand promotion fund + RMB 250 billion "trade-in" fund</li>
+          <li><strong>Consumption Tax Shift (Critical):</strong> Collection point moving from "production stage" to "retail/consumption stage," directly impacting cross-regional pricing and profit allocation models for high jewelry</li>
+          <li><strong>Local Subsidy Ban:</strong> Prohibition of improper tax rebates and hidden subsidies; store expansion will rely purely on genuine sales productivity per square meter</li>
+        </ul>
+        <div class="mc-ins">If the consumption tax downstream shift materializes, it will directly affect high jewelry product pricing across channels, impacting top clients' price perception and purchase decisions — policy developments warrant close monitoring.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://think.ing.com/articles/unpacking-chinas-two-sessions-key-takeaways/" target="_blank">think.ing.com · 20/03/2026</a> · <a href="https://china.acclime.com/news-insights/tax-reform-2026/" target="_blank">china.acclime.com</a></div>
+      </div>
+
+      <div id="mac03" class="mc">
+        <div class="mc-num">Macro 03</div>
+        <div class="mc-hl">Gold at All-Time Highs + Deep Psychological Shift Among China's HNWIs</div>
+        <div class="mc-body"><ul>
+          <li><strong>Gold Price:</strong> January 2026 peak ~$5,500/oz (all-time high); following the US–Iran war outbreak (Feb 28), gold surged +5.2% on Mar 1 to $5,246; J.P. Morgan forecasts year-end $6,300/oz</li>
+          <li><strong>China HNWI Psychological Shift (Hurun China Rich List 2026):</strong> Gold has been the No. 1 preferred investment category among China's HNWIs for five consecutive years; high jewelry demand has evolved from "social display" to "wealth preservation + intergenerational legacy"</li>
+          <li><strong>Dual Impact:</strong> Positive — the jewelry "intrinsic value" narrative has never been stronger; Negative — elevated gold prices provide additional competitive advantage to Laopu Gold's (Chinese local brand) "fixed pricing" model</li>
+        </ul>
+        <div class="mc-ins">The gold price narrative is currently the most powerful tool for top-client communication; proactively combining gemstone scarcity and craftsmanship value-preservation narratives is recommended.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://www.hurun.net/en-us/info/detail?num=O25UN7HPCY4X" target="_blank">hurun.net · 21/03/2026</a> · <a href="https://www.cnbc.com/2026/03/12/gold-iran-conflict-where-next-markets.html" target="_blank">cnbc.com · 12/03/2026</a></div>
+      </div>
+
+      <div id="mac04" class="mc wide">
+        <div class="mc-num">Macro 04</div>
+        <div class="mc-hl">Deep Stratification of China's Luxury Market: HNWI Resilience vs. Structural Rise of Local Brands</div>
+        <div class="mc-body"><ul>
+          <li><strong>Market Context:</strong> Bain estimates China's luxury market declined ~20% in 2024 (the largest drop since at least 2011), with stabilization signals emerging in H2 2025; Bernstein forecasts mid-single-digit percentage growth in 2026</li>
+          <li><strong>Stratification Landscape:</strong> HNWIs continue to concentrate toward "investment-grade" brands (Hermès, Cartier, LV) overlaid with gold safe-haven demand; aspirational luxury consumers are accelerating migration toward local Chinese brands (Laopu Gold, etc.), with the middle segment continuing to shrink</li>
+          <li><strong>Retail Confidence Signals:</strong> LV opened a landmark Beijing flagship on January 13, 2026; Tiffany and Dior opened in the same district during the same period; CNBC described this as "a strategic signal to restore consumer confidence"</li>
+          <li><strong>Industry Consensus:</strong> Digital Luxury Group: "The 2026 winners will be brands that prioritize cultural insight and focus on core clients"; HSBC: A strong China recovery is not expected until 2027</li>
+        </ul>
+        <div class="mc-ins">The market is contracting but has not disappeared. The competitive dimension has shifted from brand awareness to "who can build the most irreplaceable emotional and asset-level connection with top-tier clientele." High jewelry exhibitions + private dinners + one-on-one client relationship management are the most effective investment areas at present.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://wwd.com/business-news/business-features/what-to-watch-china-evolving-market-reset-outlook-for-2026-1238435637/" target="_blank">wwd.com · 05/01/2026</a> · <a href="https://jingdaily.com/posts/china-s-gold-jewelry-market-is-not-shrinking-but-stratifying" target="_blank">jingdaily.com · 07/04/2026</a> · <a href="https://www.cnbc.com/2026/01/14/cnbc-china-connection-newsletter-battle-for-the-recovering-luxury-market-heats-up.html" target="_blank">cnbc.com · 14/01/2026</a></div>
+      </div>
+
+      <div id="mac05" class="mc wide">
+        <div class="mc-num">Macro 05 · Geopolitics</div>
+        <div class="mc-hl">2026 US–Iran War (From Feb 28): Middle East Luxury Market Effectively Halted, ~$100 Billion in Global Market Cap Erased</div>
+        <div class="mc-stat">-$100B</div>
+        <div class="mc-stat-lbl">Global luxury stock market cap erased due to the US–Iran war (March 2026); the Middle East market (~6% of global luxury) nearly completely halted in the short term</div>
+        <div class="mc-body"><ul>
+          <li><strong>War Context:</strong> On February 28, 2026, a joint US–Israeli military operation (Operation Epic Fury) killed Iranian Supreme Leader Khamenei; Iran subsequently launched massive retaliation against US bases and allied nations across the Middle East, Dubai International Airport was struck and temporarily closed, with conflict spreading to Israel, Saudi Arabia, Qatar, and the UAE</li>
+          <li><strong>Direct Luxury Market Impact:</strong> Middle East market annual growth had been 6–8% (Bernstein), now nearly halted; Bernstein analyst Luca Solca: if the war ends quickly the impact is "limited," but if it persists there is recession risk</li>
+          <li><strong>Energy &amp; Supply Chain Impact:</strong> Strait of Hormuz commercial shipping disrupted, Brent crude rising to ~$120/barrel; European energy crisis (Germany and Italy facing technical recession risk), further driving up high jewelry manufacturing and logistics costs</li>
+          <li><strong>Indirect Impact on China:</strong> China is one of the largest importers of Middle Eastern oil/natural gas; rising energy prices will increase domestic industrial costs, further dampening the already moderate 2026 economic growth outlook</li>
+        </ul>
+        <div class="mc-ins">The direct impact is relatively limited; however, the global uncertainty triggered by the war may further reinforce Chinese HNWIs' preference for "tangible assets" — this aligns with high jewelry's value-preservation narrative.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://www.cnbc.com/2026/03/27/iran-war-wipes-out-100-billion-from-luxury-stocks.html" target="_blank">cnbc.com · 27/03/2026</a> · <a href="https://fortune.com/2026/03/20/how-will-iran-war-impact-middle-east-luxury-sales/" target="_blank">fortune.com · 20/03/2026</a> · <a href="https://www.britannica.com/event/2026-Iran-war" target="_blank">britannica.com</a> · <a href="https://www.weforum.org/stories/2026/03/the-global-price-tag-of-war-in-the-middle-east/" target="_blank">weforum.org · 2026/03</a></div>
+      </div>
+
+      <div id="mac06" class="mc wide">
+        <div class="mc-num">Macro 06</div>
+        <div class="mc-hl">Natural Diamond Crisis: Lab-Grown Diamonds Structurally Disrupting the Market, Industry Accelerating Toward "Gemstone Scarcity" Repositioning</div>
+        <div class="mc-stat">-83%</div>
+        <div class="mc-stat-lbl">Lab-grown diamonds ~83% cheaper than natural diamonds (1-carat lab-grown $725 vs. natural $4,200, 2026)</div>
+        <div class="mc-body"><ul>
+          <li><strong>Market Landscape:</strong> Lab-grown diamonds now hold ~20% of the global diamond market; market size projected at $33.9 billion in 2026 (+7.9%); wholesale prices have dropped 90–95% since 2015</li>
+          <li><strong>De Beers' Strategic Pivot:</strong> Abandoned the Lightbox lab-grown diamond business, fully committing to the "Earth Made" natural diamond narrative; opened its largest flagship at 12 Place Vendôme, Paris (directly facing Cartier), while advancing the Anglo American divestiture</li>
+          <li><strong>Positive Implications for High Jewelry:</strong> The scarcity and value-preservation properties of natural large-carat colored gemstones (rubies, sapphires, emeralds, Padparadscha sapphires) are being reassessed; GIA has updated its distinction standards between lab-grown and natural diamonds, strengthening industry identification boundaries</li>
+        </ul>
+        <div class="mc-ins">Lab-grown diamonds' impact on the mass market is accelerating differentiation in the high jewelry category: as consumers increasingly cannot distinguish "ordinary diamond jewelry," brand narrative, the irreproducibility of rare gemstones, and the unquantifiable value of high jewelry craftsmanship become the core pillars supporting pricing and clientele selection.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://www.debeersgroup.com/news-insights/latest-group-news/2026/preliminary-financial-results-for-2025" target="_blank">debeersgroup.com · 2026/02</a> · <a href="https://leondiamond.com/blogs/diamonds/why-diamonds-are-expensive" target="_blank">leondiamond.com · 30/01/2026</a> · <a href="https://www.scmp.com/magazines/style/luxury/jewellery/article/3322198/style-edit-de-beers-drops-lab-grown-diamond-jewellery-focus-natural-stones" target="_blank">scmp.com · 19/08/2025</a></div>
+      </div>
+
+      <div id="mac07" class="mc wide">
+        <div class="mc-num">Macro 07</div>
+        <div class="mc-hl">Japan Market: Weak Yen Driving Large-Scale Arbitrage, Sustained Outflow of China's HNWI Clientele</div>
+        <div class="mc-stat">20–30%</div>
+        <div class="mc-stat-lbl">Price differential between Japan and China on high jewelry, providing sustained incentive for China-based clients to purchase in Japan</div>
+        <div class="mc-body"><ul>
+          <li>Driven by sustained yen weakness, Japan's luxury market is expected to continue growing 2–3% in 2026; Tokyo is becoming a preferred destination for high-value purchases among a large number of Chinese HNWIs</li>
+          <li>Price differentials of up to 20–30% make purchasing Cartier high jewelry, watches, Van Cleef &amp; Arpels, and others in Japan significantly more cost-effective than in China; this outflow directly impacts domestic per-client transaction data and CRM attribution, causing actual sales data in the China market to be understated</li>
+          <li>Hermès, Chanel, and other brands executed annual price adjustments in early 2026, partly aimed at narrowing regional price gaps; however, Japan remains one of the most price-competitive major luxury markets</li>
+        </ul>
+        <div class="mc-ins">Some top clients have already incorporated purchasing high jewelry in Japan as a routine consumption behavior; understanding this pattern helps strengthen the exclusive experience value proposition of local purchases in domestic clientele communications.</div>
+        </div>
+        <div class="mc-src">Sources: <a href="https://cpp-luxury.com/japans-luxury-market-continues-to-grow-in-2026/" target="_blank">cpp-luxury.com · 2026</a> · <a href="https://www.pursebop.com/new-us-hermes-prices-2026/" target="_blank">pursebop.com · 2026/01</a></div>
+      </div>
+
+    </div>
+  </div><!-- /sec 2 -->
+
+  <div class="footer"></div>
+</div>
+
+<script>
+(function(){
+  var ids=['sec-1a','g-riche-cn','b-cartier-cn','b-vca-cn','b-vca-minerals','b-buccellati-cn','b-vhernier-cn','g-lvmh-cn','b-tiffany-flagship','b-tiffany-dinner','b-tiffany-exhibition','b-fred-cn','g-kering-cn','b-kering-grp','b-boucheron-flagship','b-qeelin-cn','g-ind-cn','b-hw-cn','g-local-cn','b-laopu','sec-1b','g-riche-intl','b-cartier-paris','b-cartier-rome','b-vca-paris','g-lvmh-intl','b-bulgari-oscars','b-bulgari-milan','b-chaumet-intl','b-dior-intl','g-debeers','g-industry','b-ww','mac01','mac02','mac03','mac04','mac05','mac06','mac07'];
+  var links={};
+  document.querySelectorAll('.sb a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+  var parents={
+    'b-cartier-cn':'g-riche-cn','b-vca-cn':'g-riche-cn','b-vca-minerals':'g-riche-cn','b-buccellati-cn':'g-riche-cn','b-vhernier-cn':'g-riche-cn',
+    'b-tiffany-flagship':'g-lvmh-cn','b-tiffany-dinner':'g-lvmh-cn','b-tiffany-exhibition':'g-lvmh-cn','b-fred-cn':'g-lvmh-cn',
+    'b-kering-grp':'g-kering-cn','b-boucheron-flagship':'g-kering-cn','b-qeelin-cn':'g-kering-cn',
+    'b-hw-cn':'g-ind-cn',
+    'b-laopu':'g-local-cn',
+    'g-riche-cn':'sec-1a','g-lvmh-cn':'sec-1a','g-kering-cn':'sec-1a','g-ind-cn':'sec-1a','g-local-cn':'sec-1a',
+    'b-cartier-paris':'g-riche-intl','b-cartier-rome':'g-riche-intl','b-vca-paris':'g-riche-intl',
+    'b-bulgari-oscars':'g-lvmh-intl','b-bulgari-milan':'g-lvmh-intl','b-chaumet-intl':'g-lvmh-intl','b-dior-intl':'g-lvmh-intl',
+    'b-ww':'g-industry',
+    'g-riche-intl':'sec-1b','g-lvmh-intl':'sec-1b','g-debeers':'sec-1b','g-industry':'sec-1b'
+  };
+  function setActive(id){
+    Object.values(links).forEach(function(a){a.classList.remove('active');});
+    var cur=id;
+    while(cur){if(links[cur])links[cur].classList.add('active');cur=parents[cur];}
+    var el=links[id];
+    if(el){var sb=document.getElementById('tocSb');var t=el.offsetTop,h=el.offsetHeight,sh=sb.offsetHeight,st=sb.scrollTop;if(t<st+20)sb.scrollTop=t-20;else if(t+h>st+sh-20)sb.scrollTop=t+h-sh+20;}
+  }
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)setActive(e.target.id);});},{rootMargin:'-8% 0px -82% 0px',threshold:0});
+  ids.forEach(function(id){var el=document.getElementById(id);if(el)obs.observe(el);});
+  document.querySelectorAll('.sb a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.getElementById(this.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});});
+  setActive(ids[0]);
+})();
+</script>
+</body>
+</html>
